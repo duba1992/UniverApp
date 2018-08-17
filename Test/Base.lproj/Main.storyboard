@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0V0-ug-asZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="cNk-i5-U6C">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="0V0-ug-asZ" customClass="DDStartViewController" customModule="CoreDataTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DdC-4p-nyV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.050000000000000003" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="univer" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jvh-1a-erR">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="707"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sd-QX-cSp">
+                                <rect key="frame" x="96" y="44" width="182" height="57.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="42"/>
+                                <color key="textColor" red="0.96462169460000002" green="0.99813419579999996" blue="0.94531903740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxB-pY-uhG">
+                                <rect key="frame" x="107" y="272.5" width="160" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" red="0.96462169460000002" green="0.99813419579999996" blue="0.94531903740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterButtonAction:" destination="0V0-ug-asZ" eventType="touchUpInside" id="ZMG-ab-wyo"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="K9h-W7-saK">
+                                <rect key="frame" x="60" y="617" width="250" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0s5-Fq-52a" customClass="DDRoundButton" customModule="CoreDataTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="HWY-9W-mtW"/>
+                                            <constraint firstAttribute="width" constant="50" id="gWy-hD-pkr"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="facebook"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="facebookButtonAction:" destination="0V0-ug-asZ" eventType="touchUpInside" id="rTf-AM-CAo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwu-EW-G7s" customClass="DDRoundButton" customModule="CoreDataTest" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="6dh-FC-srD"/>
+                                            <constraint firstAttribute="height" constant="50" id="Ib5-86-88a"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="twitter"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="twitterButtonAction:" destination="0V0-ug-asZ" eventType="touchUpInside" id="uu4-Nx-8dU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caM-xk-M15" customClass="DDRoundButton" customModule="CoreDataTest" customModuleProvider="target">
+                                        <rect key="frame" x="200" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="OpK-cn-DPL"/>
+                                            <constraint firstAttribute="width" constant="50" id="iEe-xS-ITd"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="instagram"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="kDg-eR-8uP" kind="presentation" identifier="DDInstagramLoginViewController" id="VIg-EK-Pmb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BQs-us-jSU"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="vdy-sx-jL9">
+                                <rect key="frame" x="111" y="145.5" width="153" height="100"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgd-cA-CJq" customClass="DDTextField" customModule="CoreDataTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.76123217759999995" green="0.5068117164" blue="0.229881578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="153" id="QVa-UB-DGQ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="user"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQc-4m-tYY" customClass="DDTextField" customModule="CoreDataTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="153" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.76123217759999995" green="0.5068117164" blue="0.229881578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100.33" id="1Qb-Jt-NVw"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="153" id="BDU-T8-0Nx"/>
+                                    <constraint firstItem="bgd-cA-CJq" firstAttribute="centerX" secondItem="vdy-sx-jL9" secondAttribute="centerX" id="YAd-Mb-7sB"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fgc-A1-dYs" firstAttribute="trailing" secondItem="GxB-pY-uhG" secondAttribute="trailing" constant="108" id="0eg-mu-h6N"/>
+                            <constraint firstItem="Fgc-A1-dYs" firstAttribute="trailing" secondItem="2Sd-QX-cSp" secondAttribute="trailing" constant="97" id="5GG-iw-D03"/>
+                            <constraint firstItem="K9h-W7-saK" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Fgc-A1-dYs" secondAttribute="leading" constant="60" id="Ex3-sV-Eij"/>
+                            <constraint firstItem="2Sd-QX-cSp" firstAttribute="top" secondItem="Fgc-A1-dYs" secondAttribute="top" constant="24" id="I72-5q-cow"/>
+                            <constraint firstItem="GxB-pY-uhG" firstAttribute="leading" secondItem="Fgc-A1-dYs" secondAttribute="leading" constant="107" id="Mwo-W2-Rh3"/>
+                            <constraint firstItem="2Sd-QX-cSp" firstAttribute="leading" secondItem="Fgc-A1-dYs" secondAttribute="leading" constant="96" id="Qpa-5Y-1uQ"/>
+                            <constraint firstItem="GxB-pY-uhG" firstAttribute="top" secondItem="vdy-sx-jL9" secondAttribute="bottom" constant="27.333333333333314" id="YwJ-5k-v4k"/>
+                            <constraint firstItem="K9h-W7-saK" firstAttribute="bottom" secondItem="Fgc-A1-dYs" secondAttribute="bottom" id="Zvr-bF-VbV"/>
+                            <constraint firstItem="Jvh-1a-erR" firstAttribute="leading" secondItem="Fgc-A1-dYs" secondAttribute="leading" id="aOF-mo-veb"/>
+                            <constraint firstItem="Jvh-1a-erR" firstAttribute="top" secondItem="DdC-4p-nyV" secondAttribute="top" id="aSZ-jX-1dJ"/>
+                            <constraint firstItem="K9h-W7-saK" firstAttribute="leading" secondItem="Fgc-A1-dYs" secondAttribute="leading" constant="60" id="c5b-UH-fUW"/>
+                            <constraint firstItem="Jvh-1a-erR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fgc-A1-dYs" secondAttribute="trailing" constant="1" id="cqn-qr-Us2"/>
+                            <constraint firstItem="Fgc-A1-dYs" firstAttribute="trailing" secondItem="vdy-sx-jL9" secondAttribute="trailing" constant="111" id="fNQ-pP-uvp"/>
+                            <constraint firstItem="Fgc-A1-dYs" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Jvh-1a-erR" secondAttribute="bottom" constant="-40" id="lot-pZ-z0e"/>
+                            <constraint firstItem="vdy-sx-jL9" firstAttribute="top" secondItem="2Sd-QX-cSp" secondAttribute="bottom" constant="44" id="nFx-xl-m0g"/>
+                            <constraint firstItem="vdy-sx-jL9" firstAttribute="centerX" secondItem="DdC-4p-nyV" secondAttribute="centerX" id="uth-v2-dPe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fgc-A1-dYs"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgImage" destination="Jvh-1a-erR" id="gc3-Pt-pcK"/>
+                        <outlet property="enterButton" destination="GxB-pY-uhG" id="BXf-uY-axL"/>
+                        <outletCollection property="socialButtons" destination="0s5-Fq-52a" collectionClass="NSMutableArray" id="eZV-Mk-7nR"/>
+                        <outletCollection property="socialButtons" destination="mwu-EW-G7s" collectionClass="NSMutableArray" id="4LW-jw-1H2"/>
+                        <outletCollection property="socialButtons" destination="caM-xk-M15" collectionClass="NSMutableArray" id="bdq-U8-tec"/>
+                        <outletCollection property="socialButtons" destination="0s5-Fq-52a" collectionClass="NSMutableArray" id="ttK-I8-DCh"/>
+                        <outletCollection property="socialButtons" destination="mwu-EW-G7s" collectionClass="NSMutableArray" id="VHA-vp-tIC"/>
+                        <outletCollection property="socialButtons" destination="caM-xk-M15" collectionClass="NSMutableArray" id="EMj-XN-5m7"/>
+                        <outletCollection property="enterTextFields" destination="bgd-cA-CJq" collectionClass="NSMutableArray" id="JzV-Tq-LE5"/>
+                        <outletCollection property="enterTextFields" destination="DQc-4m-tYY" collectionClass="NSMutableArray" id="Mwe-wA-ysA"/>
+                        <segue destination="ZtM-N9-gBI" kind="presentation" identifier="EnterSuccess" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="QCc-nv-xjF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Poj-56-9Nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1479" y="2206"/>
+        </scene>
+        <!--Instagram Login View Controller-->
+        <scene sceneID="xJZ-0Q-xZk">
+            <objects>
+                <viewController id="JKX-af-d0o" customClass="DDInstagramLoginViewController" customModule="CoreDataTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o2v-QR-7hO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvD-ku-yv9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="637"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JKX-af-d0o" id="sRP-Di-bAZ"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="A13-VI-xBQ" firstAttribute="bottom" secondItem="PvD-ku-yv9" secondAttribute="bottom" constant="-34" id="Ahz-yZ-fYV"/>
+                            <constraint firstItem="PvD-ku-yv9" firstAttribute="leading" secondItem="A13-VI-xBQ" secondAttribute="leading" id="NL1-Ci-WsL"/>
+                            <constraint firstItem="A13-VI-xBQ" firstAttribute="trailing" secondItem="PvD-ku-yv9" secondAttribute="trailing" id="Rme-Cw-I6M"/>
+                            <constraint firstItem="PvD-ku-yv9" firstAttribute="top" secondItem="A13-VI-xBQ" secondAttribute="top" id="jG9-nn-qdO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A13-VI-xBQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OsP-Tu-9qW">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Us9-OJ-nQq">
+                            <connections>
+                                <action selector="cancelBarButton:" destination="JKX-af-d0o" id="6vU-H0-4Bz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="PvD-ku-yv9" id="OMG-7z-gYs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Weo-G0-sjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-650" y="3213"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kcv-iM-0ws">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kDg-eR-8uP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5JP-Oq-Tj5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JKX-af-d0o" kind="relationship" relationship="rootViewController" id="N3V-op-nvK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8t-pa-0ng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1480" y="3213"/>
+        </scene>
+        <!--StudentScreen-->
+        <scene sceneID="R5R-jj-jUn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StudentScreen" id="ZtM-N9-gBI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUD-EK-cBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="2265"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook" width="20" height="20"/>
+        <image name="instagram" width="112" height="112"/>
+        <image name="password" width="10" height="10"/>
+        <image name="twitter" width="22" height="22"/>
+        <image name="univer" width="1024" height="681"/>
+        <image name="user" width="6" height="6"/>
+    </resources>
+</document>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DDAbstract" representedClassName=".DDAbstract" syncable="YES"/>
+    <entity name="DDCDStudent" representedClassName=".DDCDStudent" parentEntity="DDAbstract" syncable="YES">
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="facebookEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firebaseID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="instagramID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="login" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="groupe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDGroupe" inverseName="student" inverseEntity="DDGroupe" syncable="YES"/>
+        <relationship name="mark" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDMark" inverseName="student" inverseEntity="DDMark" syncable="YES"/>
+        <relationship name="subject" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDSubject" inverseName="student" inverseEntity="DDSubject" syncable="YES"/>
+        <relationship name="teacher" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDTeacher" inverseName="student" inverseEntity="DDTeacher" syncable="YES"/>
+    </entity>
+    <entity name="DDGroupe" representedClassName=".DDGroupe" parentEntity="DDAbstract" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="student" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDCDStudent" inverseName="groupe" inverseEntity="DDCDStudent" syncable="YES"/>
+        <relationship name="subject" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDSubject" inverseName="groupe" inverseEntity="DDSubject" syncable="YES"/>
+        <relationship name="teacher" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDTeacher" inverseName="groupe" inverseEntity="DDTeacher" syncable="YES"/>
+    </entity>
+    <entity name="DDMark" representedClassName=".DDMark" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="mark" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDCDStudent" inverseName="mark" inverseEntity="DDCDStudent" syncable="YES"/>
+        <relationship name="subject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDSubject" inverseName="mark" inverseEntity="DDSubject" syncable="YES"/>
+    </entity>
+    <entity name="DDSubject" representedClassName=".DDSubject" parentEntity="DDAbstract" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="groupe" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDGroupe" inverseName="subject" inverseEntity="DDGroupe" syncable="YES"/>
+        <relationship name="mark" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDMark" inverseName="subject" inverseEntity="DDMark" syncable="YES"/>
+        <relationship name="student" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDCDStudent" inverseName="subject" inverseEntity="DDCDStudent" syncable="YES"/>
+        <relationship name="teacher" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDTeacher" inverseName="subject" inverseEntity="DDTeacher" syncable="YES"/>
+    </entity>
+    <entity name="DDTeacher" representedClassName=".DDTeacher" parentEntity="DDAbstract" syncable="YES">
+        <attribute name="dateOfbirth" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="instagramID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="groupe" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDGroupe" inverseName="teacher" inverseEntity="DDGroupe" syncable="YES"/>
+        <relationship name="student" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDCDStudent" inverseName="teacher" inverseEntity="DDCDStudent" syncable="YES"/>
+        <relationship name="subject" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDSubject" inverseName="teacher" inverseEntity="DDSubject" syncable="YES"/>
+    </entity>
+    <configuration name="Configuration"/>
+    <elements>
+        <element name="DDAbstract" positionX="-45" positionY="-457" width="128" height="43"/>
+        <element name="DDCDStudent" positionX="160" positionY="192" width="128" height="255"/>
+        <element name="DDGroupe" positionX="198" positionY="-360" width="128" height="103"/>
+        <element name="DDMark" positionX="-245" positionY="140" width="128" height="103"/>
+        <element name="DDSubject" positionX="-432" positionY="-342" width="128" height="118"/>
+        <element name="DDTeacher" positionX="-243" positionY="-108" width="128" height="180"/>
+    </elements>
+</model>

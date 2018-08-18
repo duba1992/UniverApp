@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		85053DE121173E2700C9E4C6 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85053DE021173E2700C9E4C6 /* ObjectMapper.framework */; };
-		85053DE421177A3B00C9E4C6 /* DDCDStudent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85053DE221177A3B00C9E4C6 /* DDCDStudent+CoreDataClass.swift */; };
-		85053DE521177A3B00C9E4C6 /* DDCDStudent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85053DE321177A3B00C9E4C6 /* DDCDStudent+CoreDataProperties.swift */; };
 		851064BD20E64D270069D6D2 /* DDTeacher+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851064B920E64D270069D6D2 /* DDTeacher+CoreDataClass.swift */; };
 		851064BF20E64D270069D6D2 /* DDTeacher+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851064BB20E64D270069D6D2 /* DDTeacher+CoreDataProperties.swift */; };
 		851064C320E694490069D6D2 /* DDStudentsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851064C220E694490069D6D2 /* DDStudentsCollectionViewController.swift */; };
@@ -35,6 +33,8 @@
 		8562D50320BDB741006BFAD9 /* DDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8562D50220BDB741006BFAD9 /* DDTextField.swift */; };
 		85687BC920BB2AAF00D233CA /* DDStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85687BC820BB2AAF00D233CA /* DDStartViewController.swift */; };
 		85687BCD20BB30F000D233CA /* DDRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85687BCC20BB30F000D233CA /* DDRoundButton.swift */; };
+		856A555A21284D4E00FD889C /* DDChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856A555921284D4E00FD889C /* DDChangePasswordViewController.swift */; };
+		856A55602128808400FD889C /* DDImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856A555F2128808400FD889C /* DDImageView.swift */; };
 		858992F720F236950089FA39 /* DDSubjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858992F620F236950089FA39 /* DDSubjectsTableViewController.swift */; };
 		858B78572096098100495D4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B78562096098100495D4E /* AppDelegate.swift */; };
 		858B785C2096098100495D4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858B785A2096098100495D4E /* Main.storyboard */; };
@@ -50,6 +50,13 @@
 		859B165720CDA157004337D7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859B165620CDA156004337D7 /* Accounts.framework */; };
 		859B165920CDA15E004337D7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859B165820CDA15E004337D7 /* AdSupport.framework */; };
 		85AB721D21172F3900DE76BE /* DDFirebaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB721C21172F3900DE76BE /* DDFirebaseRequest.swift */; };
+		85D1D3D821273753003BE70A /* DDLoginPhoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D3D721273753003BE70A /* DDLoginPhoneTableViewCell.swift */; };
+		85D1D3DA21273873003BE70A /* DDSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D3D921273873003BE70A /* DDSettingsTableViewController.swift */; };
+		85D1D3DD21273A7D003BE70A /* DDCDStudent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D3DB21273A7C003BE70A /* DDCDStudent+CoreDataClass.swift */; };
+		85D1D3DE21273A7D003BE70A /* DDCDStudent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D3DC21273A7C003BE70A /* DDCDStudent+CoreDataProperties.swift */; };
+		85D1D3E021273E15003BE70A /* DDEditProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D3DF21273E15003BE70A /* DDEditProfileTableViewCell.swift */; };
+		85D1D3E221273F63003BE70A /* DDEditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D3E121273F63003BE70A /* DDEditProfileTableViewController.swift */; };
+		85D1D3E421274149003BE70A /* DDMyImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D3E321274149003BE70A /* DDMyImagePickerController.swift */; };
 		85D537F721170AE800C93458 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D537F621170AE800C93458 /* FirebaseAuth.framework */; };
 		85D537F92117180400C93458 /* DDFirebaseClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D537F82117180400C93458 /* DDFirebaseClasses.swift */; };
 		85D537FB211721DA00C93458 /* DDFBStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D537FA211721DA00C93458 /* DDFBStudent.swift */; };
@@ -62,8 +69,6 @@
 		5CC33101D1BA94C18878D58C /* Pods_CoreDataTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF92BE24C1499872C8C30E7 /* Pods-CoreDataTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataTest/Pods-CoreDataTest.release.xcconfig"; sourceTree = "<group>"; };
 		85053DE021173E2700C9E4C6 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85053DE221177A3B00C9E4C6 /* DDCDStudent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DDCDStudent+CoreDataClass.swift"; path = "/Users/Duba/Documents/Training 1/Univer/Test/CoreData Models/DDCDStudent+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		85053DE321177A3B00C9E4C6 /* DDCDStudent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DDCDStudent+CoreDataProperties.swift"; path = "/Users/Duba/Documents/Training 1/Univer/Test/CoreData Models/DDCDStudent+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		851064B920E64D270069D6D2 /* DDTeacher+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DDTeacher+CoreDataClass.swift"; sourceTree = "<group>"; };
 		851064BB20E64D270069D6D2 /* DDTeacher+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DDTeacher+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		851064C220E694490069D6D2 /* DDStudentsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDStudentsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +94,8 @@
 		8562D50220BDB741006BFAD9 /* DDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDTextField.swift; sourceTree = "<group>"; };
 		85687BC820BB2AAF00D233CA /* DDStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDStartViewController.swift; sourceTree = "<group>"; };
 		85687BCC20BB30F000D233CA /* DDRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDRoundButton.swift; sourceTree = "<group>"; };
+		856A555921284D4E00FD889C /* DDChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDChangePasswordViewController.swift; sourceTree = "<group>"; };
+		856A555F2128808400FD889C /* DDImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDImageView.swift; sourceTree = "<group>"; };
 		858992F620F236950089FA39 /* DDSubjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDSubjectsTableViewController.swift; sourceTree = "<group>"; };
 		858B78532096098100495D4E /* CoreDataTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		858B78562096098100495D4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +113,13 @@
 		859B165620CDA156004337D7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		859B165820CDA15E004337D7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		85AB721C21172F3900DE76BE /* DDFirebaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFirebaseRequest.swift; sourceTree = "<group>"; };
+		85D1D3D721273753003BE70A /* DDLoginPhoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDLoginPhoneTableViewCell.swift; sourceTree = "<group>"; };
+		85D1D3D921273873003BE70A /* DDSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDSettingsTableViewController.swift; sourceTree = "<group>"; };
+		85D1D3DB21273A7C003BE70A /* DDCDStudent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DDCDStudent+CoreDataClass.swift"; path = "/Users/Duba/Documents/Training 1/Univer/Test/CoreData Models/DDCDStudent+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		85D1D3DC21273A7C003BE70A /* DDCDStudent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DDCDStudent+CoreDataProperties.swift"; path = "/Users/Duba/Documents/Training 1/Univer/Test/CoreData Models/DDCDStudent+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		85D1D3DF21273E15003BE70A /* DDEditProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDEditProfileTableViewCell.swift; sourceTree = "<group>"; };
+		85D1D3E121273F63003BE70A /* DDEditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDEditProfileTableViewController.swift; sourceTree = "<group>"; };
+		85D1D3E321274149003BE70A /* DDMyImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDMyImagePickerController.swift; sourceTree = "<group>"; };
 		85D537F621170AE800C93458 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D537F82117180400C93458 /* DDFirebaseClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFirebaseClasses.swift; sourceTree = "<group>"; };
 		85D537FA211721DA00C93458 /* DDFBStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFBStudent.swift; sourceTree = "<group>"; };
@@ -142,6 +156,8 @@
 				8549B93220EE832600F79CDC /* DDFacebookLogin.swift */,
 				85AB721C21172F3900DE76BE /* DDFirebaseRequest.swift */,
 				85D537FA211721DA00C93458 /* DDFBStudent.swift */,
+				85D1D3D721273753003BE70A /* DDLoginPhoneTableViewCell.swift */,
+				85D1D3DF21273E15003BE70A /* DDEditProfileTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,11 +165,31 @@
 		85687BCB20BB30D200D233CA /* DesignModel */ = {
 			isa = PBXGroup;
 			children = (
+				856A555F2128808400FD889C /* DDImageView.swift */,
 				85687BCC20BB30F000D233CA /* DDRoundButton.swift */,
 				8549B92420EAA10500F79CDC /* DDDesinableView.swift */,
 				8562D50220BDB741006BFAD9 /* DDTextField.swift */,
 			);
 			path = DesignModel;
+			sourceTree = "<group>";
+		};
+		856A555D2128563400FD889C /* Subjects */ = {
+			isa = PBXGroup;
+			children = (
+				858992F620F236950089FA39 /* DDSubjectsTableViewController.swift */,
+				8549B92820EBEDC400F79CDC /* DDMarkTableViewController.swift */,
+			);
+			path = Subjects;
+			sourceTree = "<group>";
+		};
+		856A555E2128565200FD889C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				85D1D3D921273873003BE70A /* DDSettingsTableViewController.swift */,
+				85D1D3E121273F63003BE70A /* DDEditProfileTableViewController.swift */,
+				856A555921284D4E00FD889C /* DDChangePasswordViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		858B784A2096098100495D4E = {
@@ -197,8 +233,8 @@
 		858B789C20963E3000495D4E /* CoreData Models */ = {
 			isa = PBXGroup;
 			children = (
-				85053DE221177A3B00C9E4C6 /* DDCDStudent+CoreDataClass.swift */,
-				85053DE321177A3B00C9E4C6 /* DDCDStudent+CoreDataProperties.swift */,
+				85D1D3DB21273A7C003BE70A /* DDCDStudent+CoreDataClass.swift */,
+				85D1D3DC21273A7C003BE70A /* DDCDStudent+CoreDataProperties.swift */,
 				8549B91B20EA732900F79CDC /* DDMark+CoreDataClass.swift */,
 				8549B91820EA732900F79CDC /* DDMark+CoreDataProperties.swift */,
 				8549B91920EA732900F79CDC /* DDSubject+CoreDataClass.swift */,
@@ -217,11 +253,9 @@
 			isa = PBXGroup;
 			children = (
 				85687BC820BB2AAF00D233CA /* DDStartViewController.swift */,
-				85E5A78D20F1233E001786D6 /* DDTabBarController.swift */,
-				858992F620F236950089FA39 /* DDSubjectsTableViewController.swift */,
-				851064C220E694490069D6D2 /* DDStudentsCollectionViewController.swift */,
-				8549B92820EBEDC400F79CDC /* DDMarkTableViewController.swift */,
 				8549B92E20ED509000F79CDC /* DDInstagramLoginViewController.swift */,
+				85D1D3E321274149003BE70A /* DDMyImagePickerController.swift */,
+				85D1D3D6212736F5003BE70A /* Student Screen */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -235,6 +269,17 @@
 				8549B92C20ED296800F79CDC /* DDInitDataForCoreData.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		85D1D3D6212736F5003BE70A /* Student Screen */ = {
+			isa = PBXGroup;
+			children = (
+				85E5A78D20F1233E001786D6 /* DDTabBarController.swift */,
+				856A555D2128563400FD889C /* Subjects */,
+				851064C220E694490069D6D2 /* DDStudentsCollectionViewController.swift */,
+				856A555E2128565200FD889C /* Settings */,
+			);
+			path = "Student Screen";
 			sourceTree = "<group>";
 		};
 		AD31F97EDBB1173478A27381 /* Frameworks */ = {
@@ -290,6 +335,7 @@
 		858B784B2096098100495D4E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DD;
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Duba;
@@ -407,29 +453,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D1D3DA21273873003BE70A /* DDSettingsTableViewController.swift in Sources */,
 				8549B93120EE78DD00F79CDC /* DDAlamofireRequest.swift in Sources */,
+				856A55602128808400FD889C /* DDImageView.swift in Sources */,
+				85D1D3E021273E15003BE70A /* DDEditProfileTableViewCell.swift in Sources */,
 				853806F120AE1970006BCC44 /* DDGroupe+CoreDataClass.swift in Sources */,
 				8550D47820972ACE00D3FB5A /* DDCoreDataManager.swift in Sources */,
 				8549B92120EA732A00F79CDC /* DDMark+CoreDataClass.swift in Sources */,
 				858B785F2096098100495D4E /* CoreDataTest.xcdatamodeld in Sources */,
 				851064BD20E64D270069D6D2 /* DDTeacher+CoreDataClass.swift in Sources */,
 				8549B92020EA732A00F79CDC /* DDSubject+CoreDataProperties.swift in Sources */,
+				85D1D3DD21273A7D003BE70A /* DDCDStudent+CoreDataClass.swift in Sources */,
 				8549B92B20EBF25900F79CDC /* DDMarkTableViewCell.swift in Sources */,
 				859B165120CD8F34004337D7 /* DDCoreDataFetch.swift in Sources */,
 				858992F720F236950089FA39 /* DDSubjectsTableViewController.swift in Sources */,
 				851064BF20E64D270069D6D2 /* DDTeacher+CoreDataProperties.swift in Sources */,
 				8549B92920EBEDC400F79CDC /* DDMarkTableViewController.swift in Sources */,
-				85053DE521177A3B00C9E4C6 /* DDCDStudent+CoreDataProperties.swift in Sources */,
 				8549B92F20ED509000F79CDC /* DDInstagramLoginViewController.swift in Sources */,
+				85D1D3DE21273A7D003BE70A /* DDCDStudent+CoreDataProperties.swift in Sources */,
 				85D537FB211721DA00C93458 /* DDFBStudent.swift in Sources */,
 				85E5A78E20F1233E001786D6 /* DDTabBarController.swift in Sources */,
 				85222E6520A611C900141C13 /* DDAbstract+CoreDataClass.swift in Sources */,
 				851064C520E694E60069D6D2 /* DDStudendsCollectionViewCell.swift in Sources */,
+				85D1D3E221273F63003BE70A /* DDEditProfileTableViewController.swift in Sources */,
+				85D1D3D821273753003BE70A /* DDLoginPhoneTableViewCell.swift in Sources */,
 				8549B91F20EA732A00F79CDC /* DDSubject+CoreDataClass.swift in Sources */,
 				85222E6620A611C900141C13 /* DDAbstract+CoreDataProperties.swift in Sources */,
 				8549B92D20ED296800F79CDC /* DDInitDataForCoreData.swift in Sources */,
-				85053DE421177A3B00C9E4C6 /* DDCDStudent+CoreDataClass.swift in Sources */,
 				8562D50320BDB741006BFAD9 /* DDTextField.swift in Sources */,
+				856A555A21284D4E00FD889C /* DDChangePasswordViewController.swift in Sources */,
 				85AB721D21172F3900DE76BE /* DDFirebaseRequest.swift in Sources */,
 				8549B93320EE832600F79CDC /* DDFacebookLogin.swift in Sources */,
 				85687BC920BB2AAF00D233CA /* DDStartViewController.swift in Sources */,
@@ -440,6 +492,7 @@
 				851064C320E694490069D6D2 /* DDStudentsCollectionViewController.swift in Sources */,
 				8549B92520EAA10500F79CDC /* DDDesinableView.swift in Sources */,
 				853806F220AE1970006BCC44 /* DDGroupe+CoreDataProperties.swift in Sources */,
+				85D1D3E421274149003BE70A /* DDMyImagePickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

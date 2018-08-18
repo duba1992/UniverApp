@@ -17,7 +17,9 @@ protocol DDInstagramLoginDelegate : class {
 class DDInstagramLoginViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var webView: UIWebView!
     
-    
+    deinit {
+        print("Instagram GoodBye\n\n\n\n\n\n\n\n\n\n")
+    }
     var accessToken = ""
     weak var delegate : DDInstagramLoginDelegate?
     override func viewDidLoad() {
@@ -72,6 +74,8 @@ class DDInstagramLoginViewController: UIViewController, UIWebViewDelegate {
         }
         return true
     }
+    
+    
      
     
 

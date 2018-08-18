@@ -35,10 +35,8 @@ class DDTextField: UITextField {
             imageView.image = image
             imageView.tintColor = tintColor
             
-            var width = 20 + leftPadding
-//            if borderStyle == UITextBorderStyle.none || borderStyle == UITextBorderStyle.line {
-//                width = width + 5
-//            }
+            let width = 20 + leftPadding
+
             let view = UIView(frame: CGRect(x: 0, y: 0, width: width, height: 20))
             view.addSubview(imageView)
             leftView = view
@@ -48,6 +46,20 @@ class DDTextField: UITextField {
         }
         attributedPlaceholder = NSAttributedString(attributedString: NSAttributedString(string: placeholder ?? "", attributes: [NSAttributedStringKey.foregroundColor : tintColor]))
     }
+    
+    func shake () {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.05
+        animation.repeatCount = 5
+        animation.autoreverses = true
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x - 4, y: self.center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + 4, y: self.center.y))
+        
+        self.layer.add(animation, forKey: "position")
+        
+    }
+    
+    
     
     
     

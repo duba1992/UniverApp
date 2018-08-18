@@ -30,10 +30,12 @@ class DDStartViewController: UIViewController{
     var facebookLogin : DDFacebookLogin!
    
     struct Indificators {
-        static let segueToInsgram = "DDInstagramLoginViewController"
+        static let segueToInstagram = "DDInstagramLoginViewController"
         static let segueEnter = "EnterSuccess"
     }
-    
+    deinit {
+        print("Goodbye start view\n\n\n\n\n\n\n\n\n\n")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -218,7 +220,7 @@ class DDStartViewController: UIViewController{
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Indificators.segueToInsgram {
+        if segue.identifier == Indificators.segueToInstagram {
             if let nav = segue.destination as? UINavigationController {
                 if let nextVC = nav.topViewController as? DDInstagramLoginViewController {
                       nextVC.delegate = self
@@ -278,6 +280,7 @@ extension DDStartViewController : UITextFieldDelegate {
         }
         for i in (0..<index).reversed() {
             if enterTextFields[i].text == ""{
+                enterTextFields[i].shake()
                 enterTextFields[i].becomeFirstResponder()
                 return false;
             }

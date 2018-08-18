@@ -27,6 +27,10 @@ class DDTabBarController: UITabBarController {
         let vc2 = navController2.topViewController as! DDStudentsCollectionViewController
         vc2.enterStudent = enterStudent
         
+        
+        let navController3 = self.viewControllers![2] as! UINavigationController
+        let vc3 = navController3.topViewController as! DDSettingsTableViewController
+        vc3.enterStudent = enterStudent
         // Do any additional setup after loading the view.
     }
 

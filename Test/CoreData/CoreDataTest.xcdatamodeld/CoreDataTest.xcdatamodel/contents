@@ -11,6 +11,7 @@
         <attribute name="lastUpdate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="login" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <relationship name="groupe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DDGroupe" inverseName="student" inverseEntity="DDGroupe" syncable="YES"/>
         <relationship name="mark" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDMark" inverseName="student" inverseEntity="DDMark" syncable="YES"/>
@@ -50,7 +51,7 @@
     <configuration name="Configuration"/>
     <elements>
         <element name="DDAbstract" positionX="-45" positionY="-457" width="128" height="43"/>
-        <element name="DDCDStudent" positionX="160" positionY="192" width="128" height="255"/>
+        <element name="DDCDStudent" positionX="160" positionY="192" width="128" height="270"/>
         <element name="DDGroupe" positionX="198" positionY="-360" width="128" height="103"/>
         <element name="DDMark" positionX="-245" positionY="140" width="128" height="103"/>
         <element name="DDSubject" positionX="-432" positionY="-342" width="128" height="118"/>

@@ -2,7 +2,7 @@
 //  DDCDStudent+CoreDataProperties.swift
 //  
 //
-//  Created by Duba on 05.08.2018.
+//  Created by Duba on 17.08.2018.
 //
 //
 
@@ -18,6 +18,7 @@ extension DDCDStudent {
 
     @NSManaged public var dateOfBirth: NSDate?
     @NSManaged public var facebookEmail: String?
+    @NSManaged public var firebaseID: String?
     @NSManaged public var firstName: String?
     @NSManaged public var instagramID: String?
     @NSManaged public var lastName: String?
@@ -25,7 +26,7 @@ extension DDCDStudent {
     @NSManaged public var login: String?
     @NSManaged public var password: String?
     @NSManaged public var photo: NSData?
-    @NSManaged public var firebaseID: String?
+    @NSManaged public var phone: String?
     @NSManaged public var groupe: DDGroupe?
     @NSManaged public var mark: NSSet?
     @NSManaged public var subject: NSSet?

@@ -24,11 +24,15 @@ class DDStartViewController: UIViewController{
     
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var bgImage: UIImageView!
-   
+    @IBOutlet var shadowView: UIView!
+    
     var initCoreData : DDInitDataForCoreData!
 
     var facebookLogin : DDFacebookLogin!
    
+    let activityView = UIActivityIndicatorView()
+    
+    
     struct Indificators {
         static let segueToInstagram = "DDInstagramLoginViewController"
         static let segueEnter = "EnterSuccess"
@@ -79,6 +83,11 @@ class DDStartViewController: UIViewController{
             performSegue(withIdentifier: Indificators.segueEnter, sender: self)
         }
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+    }
       
     
 
@@ -104,7 +113,7 @@ class DDStartViewController: UIViewController{
     func showTwitterButton()  {
         UIView.animate(withDuration: 0.5, animations: { [unowned self] in
             self.socialButtons[1].alpha = 1
-        }) { (true) in
+        }) {[unowned self]  (true) in
             self.showInstagramButton()
         }
     }
@@ -114,12 +123,33 @@ class DDStartViewController: UIViewController{
         UIView.animate(withDuration: 0.5, animations: { [unowned self] in
             self.socialButtons[2].alpha = 1
         }) { (true) in
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 0.5, animations: {[unowned self] in
                 self.enterButton.alpha = 1
             })
             
         }
        
+    }
+    func showShadowViewWithActivityIndicator() {
+        activityView.center = self.view.center
+        activityView.hidesWhenStopped = true
+        activityView.activityIndicatorViewStyle = .whiteLarge
+        activityView.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        shadowView.addSubview(activityView)
+        view.addSubview(shadowView)
+        UIView.animate(withDuration: 0.2) {[unowned self] in
+            self.shadowView.alpha = 0.8
+        }
+        
+    }
+    
+    func hideShadowViewWithActivityIndicator() {
+        UIApplication.shared.endIgnoringInteractionEvents()
+        UIView.animate(withDuration: 0.2) {[unowned self] in
+            self.activityView.stopAnimating()
+            self.shadowView.alpha = 0.0
+        }
     }
     
     
@@ -136,23 +166,31 @@ class DDStartViewController: UIViewController{
     @IBAction func facebookButtonAction(_ sender: Any) {
        
             let facebookLogin = DDFacebookLogin()
-     
-            facebookLogin.FacebookEnterAndGet { [unowned self] (ddUser) in
+            showShadowViewWithActivityIndicator()
+            facebookLogin.FacebookEnterAndGet(completion: { [unowned self] (ddUser) in
+                
                 if let ddUser = ddUser {
-               
-                    self.enterStudent = DDCoreDataFetch.enterStudentWith(facebookEmail: ddUser.facebookEmail!)
-                    if self.enterStudent != nil {
-                           self.performSegue(withIdentifier: Indificators.segueEnter, sender: self)
-                    } else {
-                        //TODO: Save in DATABASE
-                    }
+                  
+                    self.enterStudent = DDCoreDataFetch.enterStudentWith(facebookEmail:
+                        ddUser.facebookEmail!)
+                if self.enterStudent != nil {
+                    self.performSegue(withIdentifier: Indificators.segueEnter, sender: self)
+                } else {
+                    //TODO: Save in DATABASE
                 }
             }
+        }) { [unowned self] (error) in
+            if error != nil {
+                self.hideShadowViewWithActivityIndicator()
+            }
+        }
+        
+        
         
     }
     
     func emptyTextFields() -> Bool {
-        
+       
         for i in 0..<enterTextFields.count {
             if (enterTextFields[i].text?.isEmpty)! {
                 alertForLoginPassword(i)
@@ -168,13 +206,14 @@ class DDStartViewController: UIViewController{
             return
         }
         
-        
+        showShadowViewWithActivityIndicator()
         let student = DDCoreDataFetch.enterStudentWith(login: enterTextFields[0].text!, password: enterTextFields[1].text!)
         
         
         guard student != nil else {
         //Wrong login or password
             alertForWrongLoginOrPassword()
+            hideShadowViewWithActivityIndicator()
             return
         }
    
@@ -221,6 +260,7 @@ class DDStartViewController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Indificators.segueToInstagram {
+            showShadowViewWithActivityIndicator()
             if let nav = segue.destination as? UINavigationController {
                 if let nextVC = nav.topViewController as? DDInstagramLoginViewController {
                       nextVC.delegate = self
@@ -235,6 +275,7 @@ class DDStartViewController: UIViewController{
         }
         socialButtons = nil
         enterTextFields = nil
+      
     }
 
 }
@@ -242,12 +283,18 @@ class DDStartViewController: UIViewController{
 
 //MARK:- DDInstagramLoginDelegate (Get Instagram User)
 extension DDStartViewController : DDInstagramLoginDelegate {
-    func getInstagramAccessToken(_ accessToken : String) {
+    func getInstagramAccessToken(_ accessToken : String, error : String?) {
+        if error != nil {
+            hideShadowViewWithActivityIndicator()
+            return
+        }
         
-        DDAlamofireRequest.requestInstagramUser(accessToken,  completion: { [unowned self] (user) in
-            guard let instagramID = user  else {
+        DDAlamofireRequest.requestInstagramUser(accessToken,  completion: { [unowned self] (instagramID, error) in
+            if error != nil {
+                self.hideShadowViewWithActivityIndicator()
                 return
             }
+         
             self.enterStudent  = DDCoreDataFetch.enterStudentWith(instagramID: instagramID)
             print("Enter Student: " + (self.enterStudent?.firstName)! + " " + (self.enterStudent?.lastName)! )
         })

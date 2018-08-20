@@ -154,8 +154,12 @@ class DDSettingsTableViewController: UITableViewController {
 }
 
 extension DDSettingsTableViewController : DDInstagramLoginDelegate {
-    func getInstagramAccessToken(_ accessToken: String) {
-        enterStudent.instagramID = accessToken
+    func getInstagramAccessToken(_ accessToken: String, error: String?) {
+        if error != nil {
+            return
+        }
+         enterStudent.instagramID = accessToken
     }
+
 }
 

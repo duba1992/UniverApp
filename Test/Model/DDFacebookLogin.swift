@@ -13,13 +13,14 @@ import Firebase
 import FirebaseAuth
 class DDFacebookLogin : DDStartViewController {
     
-    public func FacebookEnterAndGet(user: @escaping (DDFBStudent?)->()) {
+    public func FacebookEnterAndGet(completion: @escaping (DDFBStudent?)->(), failure : @escaping (String?)->()) {
         
        
         FBSDKLoginManager().logIn(withReadPermissions: ["email","public_profile"], from: self) { (result, err) in
             
             if err != nil {
                 print ("Facebook button error!!!!!!!!")
+                failure("Error")
                 return
             }
             if let result = result?.token {
@@ -36,12 +37,15 @@ class DDFacebookLogin : DDStartViewController {
                     let emailFacebook = json["email"].stringValue
                  
                     DDFirebaseRequest.enterStudentWith(email: emailFacebook, completion: { (ddUser) in
-                        user(ddUser)
+                        completion(ddUser)
                     })
                    
                   
                 })
 
+            } else {
+                let error = "Error"
+                failure(error)
             }
           
         }

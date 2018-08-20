@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 protocol DDInstagramLoginDelegate : class {
-    func getInstagramAccessToken(_ accessToken: String)
+    func getInstagramAccessToken(_ accessToken: String, error : String?)
 }
 
 class DDInstagramLoginViewController: UIViewController, UIWebViewDelegate {
@@ -38,6 +38,10 @@ class DDInstagramLoginViewController: UIViewController, UIWebViewDelegate {
  
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.endIgnoringInteractionEvents()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,6 +51,7 @@ class DDInstagramLoginViewController: UIViewController, UIWebViewDelegate {
     //MARK: - Action
     
     @IBAction func cancelBarButton(_ sender: Any) {
+        self.delegate?.getInstagramAccessToken("0", error: "Error")
          self.dismiss(animated: true, completion:nil)
     }
     
@@ -62,7 +67,7 @@ class DDInstagramLoginViewController: UIViewController, UIWebViewDelegate {
                 print(accessToken)
               
                 
-                self.delegate?.getInstagramAccessToken(self.accessToken)
+                self.delegate?.getInstagramAccessToken(self.accessToken, error: nil)
                 self.dismiss(animated: true, completion:nil)
                   
   

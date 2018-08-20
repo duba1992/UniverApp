@@ -187,6 +187,7 @@
                     <connections>
                         <outlet property="bgImage" destination="Jvh-1a-erR" id="gc3-Pt-pcK"/>
                         <outlet property="enterButton" destination="GxB-pY-uhG" id="BXf-uY-axL"/>
+                        <outlet property="shadowView" destination="baz-7i-ids" id="wjb-Id-dwS"/>
                         <outletCollection property="socialButtons" destination="0s5-Fq-52a" collectionClass="NSMutableArray" id="eZV-Mk-7nR"/>
                         <outletCollection property="socialButtons" destination="mwu-EW-G7s" collectionClass="NSMutableArray" id="4LW-jw-1H2"/>
                         <outletCollection property="socialButtons" destination="caM-xk-M15" collectionClass="NSMutableArray" id="bdq-U8-tec"/>
@@ -199,6 +200,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Poj-56-9Nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view alpha="0.0" contentMode="scaleToFill" id="baz-7i-ids">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="Y7m-g9-E4t"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="-1479" y="2206"/>
         </scene>

@@ -135,7 +135,6 @@ class DDStartViewController: UIViewController{
         activityView.hidesWhenStopped = true
         activityView.activityIndicatorViewStyle = .whiteLarge
         activityView.startAnimating()
-        UIApplication.shared.beginIgnoringInteractionEvents()
         shadowView.addSubview(activityView)
         view.addSubview(shadowView)
         UIView.animate(withDuration: 0.2) {[unowned self] in

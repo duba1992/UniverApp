@@ -17,7 +17,7 @@ class DDTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.shared.endIgnoringInteractionEvents()
+ 
         // init ViewControllers 
         let navController1 = self.viewControllers![0] as! UINavigationController
         let vc1 = navController1.topViewController as! DDSubjectsTableViewController

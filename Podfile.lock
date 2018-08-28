@@ -73,6 +73,7 @@ PODS:
     - gRPC-Core (= 1.12.0)
     - gRPC-RxLibrary (= 1.12.0)
   - GTMSessionFetcher/Core (1.1.15)
+  - JTAppleCalendar (7.1.5)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -89,6 +90,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - JTAppleCalendar (~> 7.0)
   - ObjectMapper
   - SwiftyJSON (~> 4.0)
 
@@ -111,6 +113,7 @@ SPEC REPOS:
     - gRPC-ProtoRPC
     - gRPC-RxLibrary
     - GTMSessionFetcher
+    - JTAppleCalendar
     - leveldb-library
     - nanopb
     - ObjectMapper
@@ -135,12 +138,13 @@ SPEC CHECKSUMS:
   gRPC-ProtoRPC: a1bd56fb1991a8dae4581250d7259eddabb66779
   gRPC-RxLibrary: 1ed5314e8b38cd6e55c9bfa048387136ae925ce9
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   ObjectMapper: 5cccd2de6f253eda859df8116a5a554d9769e859
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: fbfe491d1b9b494b9bab8f9f6619dc62e5df2d54
+PODFILE CHECKSUM: 5424d072c7d80f8839a46be6e8d03a899fae624c
 
 COCOAPODS: 1.5.3

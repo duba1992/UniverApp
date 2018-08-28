@@ -10,13 +10,13 @@ import UIKit
 
 class DDSettingsTableViewController: UITableViewController {
 
-    public var enterStudent : DDCDStudent!
+    weak var enterStudent : DDCDStudent!
    
     struct Indificators {
         static let loginPhoneCell = "loginPhoneCell"
         static let changePasswordCell = "changePasswordCell"
         static let signInCell = "signInCell"
-         static let emptyCell = "emptyCell"
+        static let emptyCell = "emptyCell"
         static let segueToEditProfile = "segueToEditProfile"
         static let segueToChangePassword = "segueToChangePassword"
         static let segueToInstagram = "segueToInstagram"
@@ -117,11 +117,8 @@ class DDSettingsTableViewController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func instagramButtonAction(_ sender: Any) {
-       
-     
-        
-     
+    deinit {
+        print("GoodBye Settings \n\n\n\n\n")
     }
     
     //MARK: - Navigation

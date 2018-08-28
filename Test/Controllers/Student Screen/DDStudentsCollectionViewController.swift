@@ -12,7 +12,7 @@ import CoreData
 
 class DDStudentsCollectionViewController: UICollectionViewController {
    
-     public var enterStudent : DDCDStudent!
+    public weak var enterStudent : DDCDStudent!
     
     @IBOutlet weak var myGroupeCollectionView: UICollectionView!
     

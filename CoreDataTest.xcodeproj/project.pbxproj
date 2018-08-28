@@ -12,10 +12,15 @@
 		851064BF20E64D270069D6D2 /* DDTeacher+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851064BB20E64D270069D6D2 /* DDTeacher+CoreDataProperties.swift */; };
 		851064C320E694490069D6D2 /* DDStudentsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851064C220E694490069D6D2 /* DDStudentsCollectionViewController.swift */; };
 		851064C520E694E60069D6D2 /* DDStudendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851064C420E694E60069D6D2 /* DDStudendsCollectionViewCell.swift */; };
+		851154C521330AC700C530AE /* DDHousing+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851154C321330AC700C530AE /* DDHousing+CoreDataProperties.swift */; };
+		851154C621330AC700C530AE /* DDHousing+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851154C421330AC700C530AE /* DDHousing+CoreDataClass.swift */; };
+		851154D32133243400C530AE /* DDJournal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851154CF2133243400C530AE /* DDJournal+CoreDataProperties.swift */; };
+		851154D42133243400C530AE /* DDGroupe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851154D02133243400C530AE /* DDGroupe+CoreDataProperties.swift */; };
+		851154D52133243400C530AE /* DDGroupe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851154D12133243400C530AE /* DDGroupe+CoreDataClass.swift */; };
+		851154D62133243400C530AE /* DDJournal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851154D22133243400C530AE /* DDJournal+CoreDataClass.swift */; };
+		851154D821332C5200C530AE /* DDTimeTableSubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851154D721332C5200C530AE /* DDTimeTableSubjectTableViewCell.swift */; };
 		85222E6520A611C900141C13 /* DDAbstract+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85222E6320A611C900141C13 /* DDAbstract+CoreDataClass.swift */; };
 		85222E6620A611C900141C13 /* DDAbstract+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85222E6420A611C900141C13 /* DDAbstract+CoreDataProperties.swift */; };
-		853806F120AE1970006BCC44 /* DDGroupe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853806ED20AE1970006BCC44 /* DDGroupe+CoreDataClass.swift */; };
-		853806F220AE1970006BCC44 /* DDGroupe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853806EE20AE1970006BCC44 /* DDGroupe+CoreDataProperties.swift */; };
 		853FF7BF20E570EE000C6106 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853FF7BE20E570EE000C6106 /* Alamofire.framework */; };
 		853FF7C120E570EE000C6106 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853FF7C020E570EE000C6106 /* SwiftyJSON.framework */; };
 		8549B91E20EA732A00F79CDC /* DDMark+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8549B91820EA732900F79CDC /* DDMark+CoreDataProperties.swift */; };
@@ -30,6 +35,10 @@
 		8549B93120EE78DD00F79CDC /* DDAlamofireRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8549B93020EE78DD00F79CDC /* DDAlamofireRequest.swift */; };
 		8549B93320EE832600F79CDC /* DDFacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8549B93220EE832600F79CDC /* DDFacebookLogin.swift */; };
 		8550D47820972ACE00D3FB5A /* DDCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8550D47720972ACE00D3FB5A /* DDCoreDataManager.swift */; };
+		8556C7252131824D00608D2B /* DDWeakTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556C7242131824D00608D2B /* DDWeakTimeTableViewController.swift */; };
+		85598BAF21303DEF009D0D71 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85598BAE21303DEF009D0D71 /* JTAppleCalendar.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		85598BB121303E52009D0D71 /* DDCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85598BB021303E52009D0D71 /* DDCalendarCell.swift */; };
+		85598BB321303EE5009D0D71 /* DDTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85598BB221303EE5009D0D71 /* DDTimeTableViewController.swift */; };
 		8562D50320BDB741006BFAD9 /* DDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8562D50220BDB741006BFAD9 /* DDTextField.swift */; };
 		85687BC920BB2AAF00D233CA /* DDStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85687BC820BB2AAF00D233CA /* DDStartViewController.swift */; };
 		85687BCD20BB30F000D233CA /* DDRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85687BCC20BB30F000D233CA /* DDRoundButton.swift */; };
@@ -73,10 +82,15 @@
 		851064BB20E64D270069D6D2 /* DDTeacher+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DDTeacher+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		851064C220E694490069D6D2 /* DDStudentsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDStudentsCollectionViewController.swift; sourceTree = "<group>"; };
 		851064C420E694E60069D6D2 /* DDStudendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDStudendsCollectionViewCell.swift; sourceTree = "<group>"; };
+		851154C321330AC700C530AE /* DDHousing+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DDHousing+CoreDataProperties.swift"; path = "/Users/Duba/Documents/Training 1/univerApp/Test/CoreData Models/DDHousing+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		851154C421330AC700C530AE /* DDHousing+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DDHousing+CoreDataClass.swift"; path = "/Users/Duba/Documents/Training 1/univerApp/Test/CoreData Models/DDHousing+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		851154CF2133243400C530AE /* DDJournal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DDJournal+CoreDataProperties.swift"; path = "/Users/Duba/Documents/Training 1/univerApp/Test/CoreData Models/DDJournal+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		851154D02133243400C530AE /* DDGroupe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DDGroupe+CoreDataProperties.swift"; path = "/Users/Duba/Documents/Training 1/univerApp/Test/CoreData Models/DDGroupe+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		851154D12133243400C530AE /* DDGroupe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DDGroupe+CoreDataClass.swift"; path = "/Users/Duba/Documents/Training 1/univerApp/Test/CoreData Models/DDGroupe+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		851154D22133243400C530AE /* DDJournal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DDJournal+CoreDataClass.swift"; path = "/Users/Duba/Documents/Training 1/univerApp/Test/CoreData Models/DDJournal+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		851154D721332C5200C530AE /* DDTimeTableSubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDTimeTableSubjectTableViewCell.swift; sourceTree = "<group>"; };
 		85222E6320A611C900141C13 /* DDAbstract+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DDAbstract+CoreDataClass.swift"; sourceTree = "<group>"; };
 		85222E6420A611C900141C13 /* DDAbstract+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DDAbstract+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		853806ED20AE1970006BCC44 /* DDGroupe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DDGroupe+CoreDataClass.swift"; sourceTree = "<group>"; };
-		853806EE20AE1970006BCC44 /* DDGroupe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DDGroupe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		853FF7BE20E570EE000C6106 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		853FF7C020E570EE000C6106 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8549B91820EA732900F79CDC /* DDMark+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DDMark+CoreDataProperties.swift"; path = "/Users/Duba/Documents/Training 1/CoreDataTest/CoreDataTest/CoreData Models/DDMark+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
@@ -91,6 +105,10 @@
 		8549B93020EE78DD00F79CDC /* DDAlamofireRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlamofireRequest.swift; sourceTree = "<group>"; };
 		8549B93220EE832600F79CDC /* DDFacebookLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFacebookLogin.swift; sourceTree = "<group>"; };
 		8550D47720972ACE00D3FB5A /* DDCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDCoreDataManager.swift; sourceTree = "<group>"; };
+		8556C7242131824D00608D2B /* DDWeakTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDWeakTimeTableViewController.swift; sourceTree = "<group>"; };
+		85598BAE21303DEF009D0D71 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85598BB021303E52009D0D71 /* DDCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDCalendarCell.swift; sourceTree = "<group>"; };
+		85598BB221303EE5009D0D71 /* DDTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDTimeTableViewController.swift; sourceTree = "<group>"; };
 		8562D50220BDB741006BFAD9 /* DDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDTextField.swift; sourceTree = "<group>"; };
 		85687BC820BB2AAF00D233CA /* DDStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDStartViewController.swift; sourceTree = "<group>"; };
 		85687BCC20BB30F000D233CA /* DDRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDRoundButton.swift; sourceTree = "<group>"; };
@@ -131,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85598BAF21303DEF009D0D71 /* JTAppleCalendar.framework in Frameworks */,
 				85053DE121173E2700C9E4C6 /* ObjectMapper.framework in Frameworks */,
 				85D537F721170AE800C93458 /* FirebaseAuth.framework in Frameworks */,
 				85943F532115DB0800679495 /* FirebaseCore.framework in Frameworks */,
@@ -146,6 +165,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8556C723213181B600608D2B /* TimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				85598BB221303EE5009D0D71 /* DDTimeTableViewController.swift */,
+				8556C7242131824D00608D2B /* DDWeakTimeTableViewController.swift */,
+			);
+			path = TimeTable;
+			sourceTree = "<group>";
+		};
 		8562D50120BDB70F006BFAD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +186,8 @@
 				85D537FA211721DA00C93458 /* DDFBStudent.swift */,
 				85D1D3D721273753003BE70A /* DDLoginPhoneTableViewCell.swift */,
 				85D1D3DF21273E15003BE70A /* DDEditProfileTableViewCell.swift */,
+				85598BB021303E52009D0D71 /* DDCalendarCell.swift */,
+				851154D721332C5200C530AE /* DDTimeTableSubjectTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,8 +247,8 @@
 				8562D50120BDB70F006BFAD9 /* Model */,
 				85687BCB20BB30D200D233CA /* DesignModel */,
 				85A519E920A32D1B00C83DB5 /* CoreData */,
-				85A519E420A32BEB00C83DB5 /* Controllers */,
 				858B789C20963E3000495D4E /* CoreData Models */,
+				85A519E420A32BEB00C83DB5 /* Controllers */,
 				858B78562096098100495D4E /* AppDelegate.swift */,
 				858B785A2096098100495D4E /* Main.storyboard */,
 				85943F562115DE0900679495 /* StudentScreen.storyboard */,
@@ -233,6 +263,12 @@
 		858B789C20963E3000495D4E /* CoreData Models */ = {
 			isa = PBXGroup;
 			children = (
+				851154D12133243400C530AE /* DDGroupe+CoreDataClass.swift */,
+				851154D02133243400C530AE /* DDGroupe+CoreDataProperties.swift */,
+				851154D22133243400C530AE /* DDJournal+CoreDataClass.swift */,
+				851154CF2133243400C530AE /* DDJournal+CoreDataProperties.swift */,
+				851154C421330AC700C530AE /* DDHousing+CoreDataClass.swift */,
+				851154C321330AC700C530AE /* DDHousing+CoreDataProperties.swift */,
 				85D1D3DB21273A7C003BE70A /* DDCDStudent+CoreDataClass.swift */,
 				85D1D3DC21273A7C003BE70A /* DDCDStudent+CoreDataProperties.swift */,
 				8549B91B20EA732900F79CDC /* DDMark+CoreDataClass.swift */,
@@ -243,8 +279,6 @@
 				851064BB20E64D270069D6D2 /* DDTeacher+CoreDataProperties.swift */,
 				85222E6320A611C900141C13 /* DDAbstract+CoreDataClass.swift */,
 				85222E6420A611C900141C13 /* DDAbstract+CoreDataProperties.swift */,
-				853806ED20AE1970006BCC44 /* DDGroupe+CoreDataClass.swift */,
-				853806EE20AE1970006BCC44 /* DDGroupe+CoreDataProperties.swift */,
 			);
 			path = "CoreData Models";
 			sourceTree = "<group>";
@@ -278,6 +312,7 @@
 				856A555D2128563400FD889C /* Subjects */,
 				851064C220E694490069D6D2 /* DDStudentsCollectionViewController.swift */,
 				856A555E2128565200FD889C /* Settings */,
+				8556C723213181B600608D2B /* TimeTable */,
 			);
 			path = "Student Screen";
 			sourceTree = "<group>";
@@ -285,6 +320,7 @@
 		AD31F97EDBB1173478A27381 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85598BAE21303DEF009D0D71 /* JTAppleCalendar.framework */,
 				85053DE021173E2700C9E4C6 /* ObjectMapper.framework */,
 				85D537F621170AE800C93458 /* FirebaseAuth.framework */,
 				85943F522115DB0800679495 /* FirebaseCore.framework */,
@@ -412,6 +448,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -431,6 +468,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -456,15 +494,18 @@
 				85D1D3DA21273873003BE70A /* DDSettingsTableViewController.swift in Sources */,
 				8549B93120EE78DD00F79CDC /* DDAlamofireRequest.swift in Sources */,
 				856A55602128808400FD889C /* DDImageView.swift in Sources */,
+				851154D62133243400C530AE /* DDJournal+CoreDataClass.swift in Sources */,
 				85D1D3E021273E15003BE70A /* DDEditProfileTableViewCell.swift in Sources */,
-				853806F120AE1970006BCC44 /* DDGroupe+CoreDataClass.swift in Sources */,
+				85598BB121303E52009D0D71 /* DDCalendarCell.swift in Sources */,
 				8550D47820972ACE00D3FB5A /* DDCoreDataManager.swift in Sources */,
 				8549B92120EA732A00F79CDC /* DDMark+CoreDataClass.swift in Sources */,
 				858B785F2096098100495D4E /* CoreDataTest.xcdatamodeld in Sources */,
 				851064BD20E64D270069D6D2 /* DDTeacher+CoreDataClass.swift in Sources */,
 				8549B92020EA732A00F79CDC /* DDSubject+CoreDataProperties.swift in Sources */,
+				851154C621330AC700C530AE /* DDHousing+CoreDataClass.swift in Sources */,
 				85D1D3DD21273A7D003BE70A /* DDCDStudent+CoreDataClass.swift in Sources */,
 				8549B92B20EBF25900F79CDC /* DDMarkTableViewCell.swift in Sources */,
+				8556C7252131824D00608D2B /* DDWeakTimeTableViewController.swift in Sources */,
 				859B165120CD8F34004337D7 /* DDCoreDataFetch.swift in Sources */,
 				858992F720F236950089FA39 /* DDSubjectsTableViewController.swift in Sources */,
 				851064BF20E64D270069D6D2 /* DDTeacher+CoreDataProperties.swift in Sources */,
@@ -474,6 +515,8 @@
 				85D537FB211721DA00C93458 /* DDFBStudent.swift in Sources */,
 				85E5A78E20F1233E001786D6 /* DDTabBarController.swift in Sources */,
 				85222E6520A611C900141C13 /* DDAbstract+CoreDataClass.swift in Sources */,
+				851154D32133243400C530AE /* DDJournal+CoreDataProperties.swift in Sources */,
+				851154C521330AC700C530AE /* DDHousing+CoreDataProperties.swift in Sources */,
 				851064C520E694E60069D6D2 /* DDStudendsCollectionViewCell.swift in Sources */,
 				85D1D3E221273F63003BE70A /* DDEditProfileTableViewController.swift in Sources */,
 				85D1D3D821273753003BE70A /* DDLoginPhoneTableViewCell.swift in Sources */,
@@ -482,8 +525,11 @@
 				8549B92D20ED296800F79CDC /* DDInitDataForCoreData.swift in Sources */,
 				8562D50320BDB741006BFAD9 /* DDTextField.swift in Sources */,
 				856A555A21284D4E00FD889C /* DDChangePasswordViewController.swift in Sources */,
+				851154D821332C5200C530AE /* DDTimeTableSubjectTableViewCell.swift in Sources */,
 				85AB721D21172F3900DE76BE /* DDFirebaseRequest.swift in Sources */,
 				8549B93320EE832600F79CDC /* DDFacebookLogin.swift in Sources */,
+				851154D52133243400C530AE /* DDGroupe+CoreDataClass.swift in Sources */,
+				85598BB321303EE5009D0D71 /* DDTimeTableViewController.swift in Sources */,
 				85687BC920BB2AAF00D233CA /* DDStartViewController.swift in Sources */,
 				85D537F92117180400C93458 /* DDFirebaseClasses.swift in Sources */,
 				85687BCD20BB30F000D233CA /* DDRoundButton.swift in Sources */,
@@ -491,8 +537,8 @@
 				858B78572096098100495D4E /* AppDelegate.swift in Sources */,
 				851064C320E694490069D6D2 /* DDStudentsCollectionViewController.swift in Sources */,
 				8549B92520EAA10500F79CDC /* DDDesinableView.swift in Sources */,
-				853806F220AE1970006BCC44 /* DDGroupe+CoreDataProperties.swift in Sources */,
 				85D1D3E421274149003BE70A /* DDMyImagePickerController.swift in Sources */,
+				851154D42133243400C530AE /* DDGroupe+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

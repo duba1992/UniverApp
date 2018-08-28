@@ -1,9 +1,8 @@
 //
 //  DDGroupe+CoreDataClass.swift
-//  CoreDataTest
+//  
 //
-//  Created by Duba on 17.05.2018.
-//  Copyright © 2018 Duba. All rights reserved.
+//  Created by Duba on 26.08.2018.
 //
 //
 

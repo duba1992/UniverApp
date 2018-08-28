@@ -20,9 +20,25 @@
     </entity>
     <entity name="DDGroupe" representedClassName=".DDGroupe" parentEntity="DDAbstract" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="journal" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDJournal" syncable="YES"/>
         <relationship name="student" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDCDStudent" inverseName="groupe" inverseEntity="DDCDStudent" syncable="YES"/>
         <relationship name="subject" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDSubject" inverseName="groupe" inverseEntity="DDSubject" syncable="YES"/>
         <relationship name="teacher" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDTeacher" inverseName="groupe" inverseEntity="DDTeacher" syncable="YES"/>
+    </entity>
+    <entity name="DDHousing" representedClassName=".DDHousing" parentEntity="DDAbstract" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DDJournal" representedClassName=".DDJournal" parentEntity="DDAbstract" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="groupeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lectureHall" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacherNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="groupes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DDGroupe" syncable="YES"/>
     </entity>
     <entity name="DDMark" representedClassName=".DDMark" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -52,7 +68,9 @@
     <elements>
         <element name="DDAbstract" positionX="-45" positionY="-457" width="128" height="43"/>
         <element name="DDCDStudent" positionX="160" positionY="192" width="128" height="270"/>
-        <element name="DDGroupe" positionX="198" positionY="-360" width="128" height="103"/>
+        <element name="DDGroupe" positionX="198" positionY="-360" width="128" height="118"/>
+        <element name="DDHousing" positionX="205" positionY="-522" width="128" height="88"/>
+        <element name="DDJournal" positionX="378" positionY="-360" width="128" height="163"/>
         <element name="DDMark" positionX="-245" positionY="140" width="128" height="103"/>
         <element name="DDSubject" positionX="-432" positionY="-342" width="128" height="118"/>
         <element name="DDTeacher" positionX="-243" positionY="-108" width="128" height="180"/>

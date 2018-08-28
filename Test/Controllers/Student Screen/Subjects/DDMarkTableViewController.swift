@@ -70,6 +70,9 @@ class DDMarkTableViewController: UITableViewController {
         
         return cell
     }
+    deinit {
+        print("Goodbye marks\n\n\n\n")
+    }
     /*
     // MARK: - Navigation
 

@@ -162,7 +162,6 @@ class DDCoreDataFetch {
         
         // Set result format fo request
         fetchRequest.resultType = .dictionaryResultType
-        // Create predicates
         
         // Create NSPredicate for find average number
    
@@ -355,6 +354,83 @@ class DDCoreDataFetch {
         
         return groupes.count > 0 ? groupes[0] : nil
     }
+   static func requestJournal(forGroupe groupe : DDGroupe, andDate date : Date) -> [DDJournal]{
+        var journals = [DDJournal]()
+        let fetchRequest = DDCoreDataManager.instance.FetchRequest(forEntityName: DDJournal.typeName)
+        
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        let calendar = NSCalendar.current
+        let startDate = calendar.startOfDay(for: date)
+        let endDate = calendar.date(byAdding: .day, value: 1, to: startDate)
+    
+    let predicate = NSPredicate(format: "(date >= %@) AND (date < %@) AND groupeName contains [cd] %@", startDate as CVarArg, endDate! as CVarArg, groupe.name!);
+        fetchRequest.predicate = predicate
+        
+        do {
+            let result = try DDCoreDataManager.instance.managedObjectContext.fetch(fetchRequest)
+            if result.count > 0
+            {
+                
+                journals = result as! [NSManagedObject] as! [DDJournal]
+                
+            }
+            
+        } catch {
+            let fetchError = error as NSError
+            print(fetchError)
+        }
+        
+        return journals
+    }
+    
+    static func requestHousing(byLatitude : Double, andLongitude : Double) -> DDHousing? {
+        var housing = [DDHousing]()
+        let fetchRequest = DDCoreDataManager.instance.FetchRequest(forEntityName: DDHousing.typeName)
+        
+        let fetchPredicate = NSPredicate(format: "latitude = %@ AND longitude = %@", byLatitude, andLongitude)
+        fetchRequest.predicate = fetchPredicate
+        
+        do {
+            let result = try DDCoreDataManager.instance.managedObjectContext.fetch(fetchRequest)
+            if result.count > 0
+            {
+                
+                housing = result as! [NSManagedObject] as! [DDHousing]
+                
+            }
+            
+        } catch {
+            let fetchError = error as NSError
+            print(fetchError)
+        }
+        
+        return housing.count > 0 ? housing[0] : nil
+    }
+    static func requestAllJournals() -> [DDJournal]? {
+        var journals = [DDJournal]()
+        let fetchRequest = DDCoreDataManager.instance.FetchRequest(forEntityName: DDJournal.typeName)
+        
+       
+        
+        do {
+            let result = try DDCoreDataManager.instance.managedObjectContext.fetch(fetchRequest)
+            if result.count > 0
+            {
+                
+                journals = result as! [NSManagedObject] as! [DDJournal]
+                
+            }
+            
+        } catch {
+            let fetchError = error as NSError
+            print(fetchError)
+        }
+        
+        return journals
+    }
+    
+    
    
     
     

@@ -11,7 +11,7 @@ import UIKit
 class DDTabBarController: UITabBarController {
 
 
-    public var enterStudent : DDCDStudent!
+    weak var enterStudent : DDCDStudent!
     
     
     
@@ -32,14 +32,25 @@ class DDTabBarController: UITabBarController {
         let navController3 = self.viewControllers![2] as! UINavigationController
         let vc3 = navController3.topViewController as! DDSettingsTableViewController
         vc3.enterStudent = enterStudent
-        // Do any additional setup after loading the view.
+        
+        let navController4 = self.viewControllers![3] as! UINavigationController
+        let vc4 = navController4.topViewController as! DDTimeTableViewController
+        vc4.enterStudent = enterStudent
+   
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    deinit {
+        print("Goodbye Tab Bar Controller \n\n\n")
+    }
 
     /*
     // MARK: - Navigation

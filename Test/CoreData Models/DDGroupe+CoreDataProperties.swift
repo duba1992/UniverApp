@@ -1,9 +1,8 @@
 //
 //  DDGroupe+CoreDataProperties.swift
-//  CoreDataTest
+//  
 //
-//  Created by Duba on 17.05.2018.
-//  Copyright © 2018 Duba. All rights reserved.
+//  Created by Duba on 26.08.2018.
 //
 //
 
@@ -21,6 +20,7 @@ extension DDGroupe {
     @NSManaged public var student: NSSet?
     @NSManaged public var subject: NSSet?
     @NSManaged public var teacher: NSSet?
+    @NSManaged public var journal: NSSet?
 
 }
 
@@ -72,5 +72,22 @@ extension DDGroupe {
 
     @objc(removeTeacher:)
     @NSManaged public func removeFromTeacher(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for journal
+extension DDGroupe {
+
+    @objc(addJournalObject:)
+    @NSManaged public func addToJournal(_ value: DDJournal)
+
+    @objc(removeJournalObject:)
+    @NSManaged public func removeFromJournal(_ value: DDJournal)
+
+    @objc(addJournal:)
+    @NSManaged public func addToJournal(_ values: NSSet)
+
+    @objc(removeJournal:)
+    @NSManaged public func removeFromJournal(_ values: NSSet)
 
 }

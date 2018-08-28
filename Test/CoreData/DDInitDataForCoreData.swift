@@ -15,8 +15,8 @@ class DDInitDataForCoreData {
     public func saveMyStudent() {
         
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd"
-        var  birthDay = dateFormatterGet.date(from: "1992-08-06")
+        dateFormatterGet.dateFormat = "dd-MM-yyyy"
+        let birthDay = dateFormatterGet.date(from: "06-08-1992")
         var myStudent = DDCDStudent()
         myStudent.firstName = "Dmitrij"
         myStudent.lastName = "Dubin"
@@ -28,8 +28,7 @@ class DDInitDataForCoreData {
         let image = UIImage(named: "me.jpg")
         let imageData : NSData = UIImagePNGRepresentation(image!)! as NSData
         myStudent.photo = imageData
-        
-        birthDay = dateFormatterGet.date(from: "1992-08-06")
+     
         myStudent.dateOfBirth = birthDay as NSDate?
         myStudent.addToSubject((myStudent.groupe?.subject)!)
         setRandomMarksForStudent(student: &myStudent, groupe: myStudent.groupe!)
@@ -59,7 +58,8 @@ class DDInitDataForCoreData {
             group.addToSubject(subjects[i])
             
         }
-        
+        var building = initHousing(name: "Main Housing", latitude: 46.987508, longitude: 32.001310)
+        randomInitJournal(forGroupe: group, inHousing: building, andSubject: subjects)
         DDCoreDataManager.instance.saveContext()
         
         
@@ -75,6 +75,8 @@ class DDInitDataForCoreData {
             group.addToSubject(subjects[i])
             
         }
+        building = initHousing(name: "Old Housing", latitude: 46.953670, longitude: 31.987597)
+        randomInitJournal(forGroupe: group, inHousing: building, andSubject: subjects)
         DDCoreDataManager.instance.saveContext()
         group = DDGroupe()
         subjects = [DDSubject]()
@@ -88,6 +90,8 @@ class DDInitDataForCoreData {
             group.addToSubject(subjects[i])
             
         }
+        building = initHousing(name: "New Housing", latitude: 46.968307, longitude: 31.960532)
+        randomInitJournal(forGroupe: group, inHousing: building, andSubject: subjects)
         DDCoreDataManager.instance.saveContext()
         
     }
@@ -150,8 +154,8 @@ class DDInitDataForCoreData {
             let day = arc4random_uniform(28 - 1) + 1
             let month = arc4random_uniform(12 - 1) + 1
             let dateFormatterGet = DateFormatter()
-            dateFormatterGet.dateFormat = "yyyy-MM-dd"
-            let  date = dateFormatterGet.date(from: "2017-\(month)-\(day)")
+            dateFormatterGet.dateFormat = "dd-MM-yyyy"
+            let  date = dateFormatterGet.date(from: "\(day)-\(month)-2018")
             mark.date = date as NSDate?as NSDate?
             
             mark.subject = sub
@@ -162,5 +166,53 @@ class DDInitDataForCoreData {
         }
         
     }
+    func initHousing(name : String, latitude : Double, longitude : Double) -> DDHousing {
+        let building = DDHousing()
+        building.name = name
+        building.latitude = latitude
+        building.longitude = longitude
+        return building
+    }
+    func randomInitJournal(forGroupe : DDGroupe, inHousing : DDHousing, andSubject subject : [DDSubject])  {
+        
+        var journals = [DDJournal]()
+        for _ in 0..<50 {
+        
+            let day = arc4random_uniform(28 - 1) + 1
+            let month = arc4random_uniform(12 - 1) + 1
+            let dateFormatterGet = DateFormatter()
+            dateFormatterGet.dateFormat = "dd-MM-yyyy HH:mm"
+            dateFormatterGet.timeZone = TimeZone(abbreviation: "UTC")
+            var startTimeHour = 9
+            var startTimeMinute = 0
+           
+            for _ in 0..<5 {
+                let journal = DDJournal()
+                journal.date =  dateFormatterGet.date(from: "\(day)-\(month)-2018 \(startTimeHour):\(startTimeMinute)")! as NSDate
+                let random = arc4random_uniform(UInt32(subject.count))
+                journal.subject = subject[Int(random)].name;
+                journal.longitude = inHousing.longitude
+                journal.latitude = inHousing.latitude
+                journal.lectureHall = Int16(arc4random_uniform(500))
+                journal.groupeName = forGroupe.name
+                
+                
+                startTimeHour = startTimeHour + 1
+                startTimeMinute = startTimeMinute + 30
+                if startTimeMinute > 59 {
+                    startTimeMinute = 1
+                    startTimeHour = startTimeHour + 1
+                }
+                journals.append(journal)
+                forGroupe.addToJournal(journal)
+                
+            }
+        
+        }
+        
+        
+    }
+    
+   
     
 }
